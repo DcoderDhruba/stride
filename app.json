@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Stride",
+    "slug": "stride",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/stride-icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.stride.fitness"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#C7B8FA",
+        "foregroundImage": "./assets/stride-icon.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.stride.fitness",
+      "permissions": [
+        "android.permission.health.READ_STEPS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/stride-icon.png"
+    },
+    "plugins": [
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Allow $(PRODUCT_NAME) to read your step count so your daily movement ring fills in on its own."
+        }
+      ],
+      "react-native-health-connect",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ],
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8e0c67af-0ca6-457f-87f5-1fa207462011"
+      }
+    }
+  }
+}
